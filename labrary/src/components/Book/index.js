@@ -5,7 +5,6 @@ export default function Books() {
   const [Books, setBooks] = useState([]);
 
   useEffect(() => {
-      
     const get = async () => {
       await axios
         .get(`http://localhost:5000/books`)
