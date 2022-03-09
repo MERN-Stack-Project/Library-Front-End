@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import "./Books.css"
+import { Link } from "react-router-dom";
+
 
 export default function Books() {
   const [Books, setBooks] = useState([]);
@@ -21,12 +24,16 @@ export default function Books() {
   }, []);
 
   return (
-    <div>
+    <div className="booksMain">
       {Books.map((elm) => {
         return (
-          <div>
-            <h1>{elm.name}</h1>
-            <img src={elm.img} alt="" />
+          <div className="mainDiv">
+          <Link  to={`/book/${elm._id}`}>
+            <img className="bookImg" src={elm.img} alt="" />
+            </Link>
+            <span >{elm.title}</span>
+            <span>{elm.pages}</span>
+            <span>{elm.price}</span>
           </div>
         );
       })}
