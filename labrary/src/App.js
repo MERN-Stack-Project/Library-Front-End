@@ -1,23 +1,20 @@
-<<<<<<< HEAD
+
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import Books from "./components/Book/index"
+import Onebook from "./components/Book/Onebook";
+import "./app.css"
 import Home from "./pages/Home";
 
 
-function App() {
-  return (
-   <>
-   <Home />
-   </> 
-=======
-import "./App.css";
-import React from "react";
-import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <>
-    
+    <Books />
+    <Onebook />
+    <Home />
     </>
->>>>>>> 69303065d31b57b05c9c68196f39bef1fc416d37
   )
 }
 
